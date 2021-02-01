@@ -16,4 +16,12 @@ Login
 TC_01 Login with a valid email address and password
     Open Browser    https://www.facebook.com/  chrome
     Login     Testsystem618@gmail.com     Test1234.9
+    Set Selenium Speed  0.1
+    [Teardown]    Close Browser
+
+TC_02 Login with a invalid email address 
+    Open Browser    https://www.facebook.com/  chrome
+    Login     Test@example.com     Test1234.9  
+    Set Selenium Speed  0.1  
+    [Teardown]    Close Browser
     
