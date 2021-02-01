@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210201 16:47:41.236" rpa="false">
+<suite id="s1" name="Test-Facebook" source="D:\robot\Automate-test\test-facebook.robot">
+<test id="s1-t1" name="TC_01 Login with a valid email address and password">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://www.facebook.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210201 16:47:41.634" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/'.</msg>
+<status status="PASS" starttime="20210201 16:47:41.634" endtime="20210201 16:47:46.151"></status>
+</kw>
+<kw name="Login">
+<arguments>
+<arg>Testsystem618@gmail.com</arg>
+<arg>Test1234.9</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20210201 16:47:46.152" level="INFO">Typing text 'Testsystem618@gmail.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20210201 16:47:46.152" endtime="20210201 16:47:46.271"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>pass</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210201 16:47:46.271" level="INFO">Typing password into text field 'pass'.</msg>
+<msg timestamp="20210201 16:47:46.311" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210201 16:47:46.374" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210201 16:47:46.271" endtime="20210201 16:47:46.374"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>login</arg>
+</arguments>
+<msg timestamp="20210201 16:47:46.374" level="INFO">Clicking button 'login'.</msg>
+<status status="PASS" starttime="20210201 16:47:46.374" endtime="20210201 16:47:46.446"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>mount_0_0</arg>
+</arguments>
+<status status="PASS" starttime="20210201 16:47:46.446" endtime="20210201 16:47:49.944"></status>
+</kw>
+<status status="PASS" starttime="20210201 16:47:46.152" endtime="20210201 16:47:49.944"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.1</arg>
+</arguments>
+<status status="PASS" starttime="20210201 16:47:49.945" endtime="20210201 16:47:49.945"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210201 16:47:49.946" endtime="20210201 16:47:52.177"></status>
+</kw>
+<status status="PASS" starttime="20210201 16:47:41.633" endtime="20210201 16:47:52.178" critical="yes"></status>
+</test>
+<test id="s1-t2" name="TC_02 Login with a invalid email address">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://www.facebook.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210201 16:47:52.184" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/'.</msg>
+<status status="PASS" starttime="20210201 16:47:52.184" endtime="20210201 16:47:55.574"></status>
+</kw>
+<kw name="Login">
+<arguments>
+<arg>Test@example.com</arg>
+<arg>Test1234.9</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20210201 16:47:55.576" level="INFO">Typing text 'Test@example.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20210201 16:47:55.574" endtime="20210201 16:47:56.000"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>pass</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210201 16:47:56.000" level="INFO">Typing password into text field 'pass'.</msg>
+<msg timestamp="20210201 16:47:56.297" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210201 16:47:56.455" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210201 16:47:56.000" endtime="20210201 16:47:56.456"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>login</arg>
+</arguments>
+<msg timestamp="20210201 16:47:56.457" level="INFO">Clicking button 'login'.</msg>
+<status status="PASS" starttime="20210201 16:47:56.456" endtime="20210201 16:47:56.986"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>mount_0_0</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210201 16:48:02.636" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210201 16:48:02.255" endtime="20210201 16:48:02.636"></status>
+</kw>
+<msg timestamp="20210201 16:48:02.672" level="FAIL">Text 'mount_0_0' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20210201 16:47:56.986" endtime="20210201 16:48:02.672"></status>
+</kw>
+<status status="FAIL" starttime="20210201 16:47:55.574" endtime="20210201 16:48:02.672"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210201 16:48:02.672" endtime="20210201 16:48:04.888"></status>
+</kw>
+<status status="FAIL" starttime="20210201 16:47:52.183" endtime="20210201 16:48:04.890" critical="yes">Text 'mount_0_0' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t3" name="TC_03 Login with a invalid password">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://www.facebook.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210201 16:48:04.918" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/'.</msg>
+<status status="PASS" starttime="20210201 16:48:04.917" endtime="20210201 16:48:08.363"></status>
+</kw>
+<kw name="Login">
+<arguments>
+<arg>Testsystem618@gmail.com</arg>
+<arg>00000g1234.9</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20210201 16:48:08.368" level="INFO">Typing text 'Testsystem618@gmail.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20210201 16:48:08.367" endtime="20210201 16:48:08.815"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>pass</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210201 16:48:08.815" level="INFO">Typing password into text field 'pass'.</msg>
+<msg timestamp="20210201 16:48:09.079" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210201 16:48:09.252" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210201 16:48:08.815" endtime="20210201 16:48:09.252"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>login</arg>
+</arguments>
+<msg timestamp="20210201 16:48:09.252" level="INFO">Clicking button 'login'.</msg>
+<status status="PASS" starttime="20210201 16:48:09.252" endtime="20210201 16:48:09.753"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>mount_0_0</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210201 16:48:15.470" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210201 16:48:15.043" endtime="20210201 16:48:15.471"></status>
+</kw>
+<msg timestamp="20210201 16:48:15.473" level="FAIL">Text 'mount_0_0' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20210201 16:48:09.753" endtime="20210201 16:48:15.473"></status>
+</kw>
+<status status="FAIL" starttime="20210201 16:48:08.365" endtime="20210201 16:48:15.473"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210201 16:48:15.476" endtime="20210201 16:48:17.659"></status>
+</kw>
+<status status="FAIL" starttime="20210201 16:48:04.916" endtime="20210201 16:48:17.661" critical="yes">Text 'mount_0_0' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t4" name="TC_04 Login with invalid email and password">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://www.facebook.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210201 16:48:17.672" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/'.</msg>
+<status status="PASS" starttime="20210201 16:48:17.671" endtime="20210201 16:48:21.187"></status>
+</kw>
+<kw name="Login">
+<arguments>
+<arg>Test@example.com</arg>
+<arg>00000g1234.9</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20210201 16:48:21.187" level="INFO">Typing text 'Test@example.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20210201 16:48:21.187" endtime="20210201 16:48:21.626"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>pass</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210201 16:48:21.628" level="INFO">Typing password into text field 'pass'.</msg>
+<msg timestamp="20210201 16:48:21.921" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210201 16:48:22.093" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210201 16:48:21.627" endtime="20210201 16:48:22.094"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>login</arg>
+</arguments>
+<msg timestamp="20210201 16:48:22.095" level="INFO">Clicking button 'login'.</msg>
+<status status="PASS" starttime="20210201 16:48:22.094" endtime="20210201 16:48:22.658"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>mount_0_0</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210201 16:48:28.249" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210201 16:48:27.854" endtime="20210201 16:48:28.249"></status>
+</kw>
+<msg timestamp="20210201 16:48:28.250" level="FAIL">Text 'mount_0_0' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20210201 16:48:22.658" endtime="20210201 16:48:28.250"></status>
+</kw>
+<status status="FAIL" starttime="20210201 16:48:21.187" endtime="20210201 16:48:28.250"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210201 16:48:28.251" endtime="20210201 16:48:30.439"></status>
+</kw>
+<status status="FAIL" starttime="20210201 16:48:17.669" endtime="20210201 16:48:30.441" critical="yes">Text 'mount_0_0' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t5" name="TC_05 Login with phone number">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://www.facebook.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210201 16:48:30.452" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/'.</msg>
+<status status="PASS" starttime="20210201 16:48:30.451" endtime="20210201 16:48:33.854"></status>
+</kw>
+<kw name="Login">
+<arguments>
+<arg>0923913156</arg>
+<arg>Test1234.9</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20210201 16:48:33.858" level="INFO">Typing text '0923913156' into text field 'email'.</msg>
+<status status="PASS" starttime="20210201 16:48:33.857" endtime="20210201 16:48:34.306"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>pass</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210201 16:48:34.308" level="INFO">Typing password into text field 'pass'.</msg>
+<msg timestamp="20210201 16:48:34.573" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210201 16:48:34.732" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210201 16:48:34.307" endtime="20210201 16:48:34.732"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>login</arg>
+</arguments>
+<msg timestamp="20210201 16:48:34.732" level="INFO">Clicking button 'login'.</msg>
+<status status="PASS" starttime="20210201 16:48:34.732" endtime="20210201 16:48:35.206"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>mount_0_0</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210201 16:48:44.196" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210201 16:48:43.817" endtime="20210201 16:48:44.196"></status>
+</kw>
+<msg timestamp="20210201 16:48:44.196" level="FAIL">Text 'mount_0_0' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20210201 16:48:35.206" endtime="20210201 16:48:44.197"></status>
+</kw>
+<status status="FAIL" starttime="20210201 16:48:33.856" endtime="20210201 16:48:44.197"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210201 16:48:44.198" endtime="20210201 16:48:46.387"></status>
+</kw>
+<status status="FAIL" starttime="20210201 16:48:30.449" endtime="20210201 16:48:46.389" critical="yes">Text 'mount_0_0' did not appear in 5 seconds.</status>
+</test>
+<status status="FAIL" starttime="20210201 16:47:41.238" endtime="20210201 16:48:46.396"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="4">Critical Tests</stat>
+<stat pass="1" fail="4">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="4" id="s1" name="Test-Facebook">Test-Facebook</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
